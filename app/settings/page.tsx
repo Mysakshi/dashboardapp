@@ -7,7 +7,7 @@ import { dataTableData } from "../data/mockData"; // Import your mock data
 
 const SettingsPage: React.FC = () => {
   const [filter, setFilter] = useState<string>("");
-  const [theme, setTheme] = useState<string>("light");
+  
   const [showCharts, setShowCharts] = useState<boolean>(true);
   const [filteredData, setFilteredData] = useState(dataTableData);
 
