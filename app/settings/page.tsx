@@ -7,7 +7,6 @@ import { dataTableData } from "../data/mockData"; // Import your mock data
 
 const SettingsPage: React.FC = () => {
   const [filter, setFilter] = useState<string>("");
-  
   const [showCharts, setShowCharts] = useState<boolean>(true);
   const [filteredData, setFilteredData] = useState(dataTableData);
 
@@ -21,13 +20,12 @@ const SettingsPage: React.FC = () => {
     setFilteredData(filtered);
   }, [filter]);
 
-
-
   return (
- 
-        <header className="settings-header">
-      <h1>Settings</h1>
+    <div> {/* Wrap the return content in a div */}
+      <header className="settings-header">
+        <h1>Settings</h1>
       </header>
+      
       <form className="settings-form">
         <div className="form-group">
           <label htmlFor="data-filter">Data Filter:</label>
@@ -39,7 +37,6 @@ const SettingsPage: React.FC = () => {
           />
         </div>
 
-
         <div className="form-group">
           <label>
             <input
@@ -50,8 +47,6 @@ const SettingsPage: React.FC = () => {
             Show Charts
           </label>
         </div>
-
-        
       </form>
 
       {/* Render filtered data */}
@@ -72,7 +67,7 @@ const SettingsPage: React.FC = () => {
           )}
         </div>
       </div>
- 
+    </div>
   );
 };
 
