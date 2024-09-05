@@ -1,0 +1,100 @@
+/* Base styles for table */
+.tableContainer {
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: auto; /* Adjusts column widths based on content */
+  }
+  
+  .table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden; /* Prevents text overflow */
+    text-overflow: ellipsis; /* Adds ellipsis for overflowing text */
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  .table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table td {
+    color: #666;
+  }
+  
+  /* Column-specific widths */
+  .table th:nth-child(1),
+  .table td:nth-child(1) {
+    width: 25%;
+  }
+  
+  .table th:nth-child(2),
+  .table td:nth-child(2) {
+    width: 30%;
+  }
+  
+  .table th:nth-child(3),
+  .table td:nth-child(3) {
+    width: 20%;
+  }
+  
+  .table th:nth-child(4),
+  .table td:nth-child(4) {
+    width: 25%;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .table th, .table td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .table thead {
+      display: none; /* Hide the table header on small screens */
+    }
+  
+    .table tr {
+      margin-bottom: 15px;
+      display: block;
+      border: 1px solid #ddd;
+    }
+  
+    .table td {
+      display: block;
+      text-align: right;
+      position: relative;
+      padding-left: 50%;
+      white-space: normal; /* Allow text to wrap */
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .table td::before {
+      content: attr(data-label); /* Add a label for each cell */
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: bold;
+      color: #333;
+      background: #f4f4f4;
+    }
+  }
+  
