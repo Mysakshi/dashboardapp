@@ -24,7 +24,7 @@ const SettingsPage: React.FC = () => {
 
 
   return (
-    <div className={`settings-container ${theme}`}>
+ 
         <header className="settings-header">
       <h1>Settings</h1>
       </header>
@@ -72,7 +72,7 @@ const SettingsPage: React.FC = () => {
           )}
         </div>
       </div>
-    </div>
+ 
   );
 };
 
