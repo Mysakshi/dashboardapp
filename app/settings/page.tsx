@@ -21,10 +21,7 @@ const SettingsPage: React.FC = () => {
     setFilteredData(filtered);
   }, [filter]);
 
-  // Apply theme class to the container element
-  useEffect(() => {
-    document.body.className = theme; // Apply theme to body or a wrapper div
-  }, [theme]);
+
 
   return (
     <div className={`settings-container ${theme}`}>
